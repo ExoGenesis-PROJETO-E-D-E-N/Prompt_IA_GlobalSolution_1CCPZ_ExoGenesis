@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Integrantes
+## Integrantes
 
 | Nome | RM |
 |Arthur Vettorazzo de Souza | RM 569445 |
