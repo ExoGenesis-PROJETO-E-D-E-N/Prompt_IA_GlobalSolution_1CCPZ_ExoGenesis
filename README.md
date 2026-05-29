@@ -1,4 +1,4 @@
-# 🌿🚀 Projeto E.D.E.N.
+#  Projeto E.D.E.N.
 ### *Ecological Development in Exo-Environments*
 ### Desenvolvimento Ecológico em Exoambientes
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 🚨 Problema Abordado
+## Problema Abordado
 
 Com o avanço do aquecimento global e o risco de extinção de espécies nativas
 da Mata Atlântica, o Brasil enfrenta uma crise ambiental sem precedentes.
@@ -30,7 +30,7 @@ o uso do ambiente orbital como laboratório para acelerar a evolução vegetal.
 
 ---
 
-## 💡 Proposta do Projeto E.D.E.N.
+## Proposta do Projeto E.D.E.N.
 
 O **Projeto E.D.E.N.** é uma biocápsula/estufa botânica 100% automatizada
 enviada à órbita baixa da Terra (LEO). Seu objetivo é expor sementes e mudas
@@ -59,7 +59,7 @@ operacional da missão. A IA deve equilibrar dois objetivos conflitantes:
 
 ---
 
-## 🛠️ Tecnologias e Justificativa Técnica
+## Tecnologias e Justificativa Técnica
 
 | Tecnologia | Função | Justificativa |
 |---|---|---|
@@ -79,7 +79,7 @@ especialmente em CoT longo e structured output.
 
 ---
 
-## 🏗️ Decisões Arquiteturais
+## Decisões Arquiteturais
 
 ### Por que Prompt Augmentation e não RAG?
 
@@ -90,7 +90,7 @@ Esta foi uma decisão consciente baseada na **natureza dos dados da missão**:
 | Tipo de dado | Telemetria dinâmica (muda por ciclo orbital) | Documentos estáticos (PDFs, manuais extensos) |
 | Volume por consulta | ~5 valores numéricos por ciclo | Centenas de páginas |
 | Disponibilidade | Conhecidos no momento da chamada ao LLM | Precisam ser recuperados de um índice vetorial |
-| Necessidade de retrieval | ❌ Dados já estão disponíveis | ✅ Necessário buscar o trecho relevante |
+| Necessidade de retrieval |  Dados já estão disponíveis |  Necessário buscar o trecho relevante |
 
 Como os dados de telemetria são **compactos e já conhecidos** no momento
 da inferência, a injeção direta no prompt (Prompt Augmentation) é mais
@@ -104,10 +104,10 @@ complexidade desnecessária para este caso de uso.
 
 | Critério | Online — nossa escolha | Local — descartado |
 |---|---|---|
-| **Privacidade** | ✅ Aceitável — dados são simulados, sem informação sensível | Necessário apenas para dados confidenciais reais |
-| **Recursos** | ✅ Processamento nos servidores HuggingFace | Llama 3.1 8B exige ~16GB VRAM — no limite da T4 |
-| **Estabilidade** | ✅ Sem risco de OOM no notebook | Download de ~16GB pode travar a sessão |
-| **Foco** | ✅ Foco total em Prompt Engineering | Gerenciamento de pipeline local desvia do objetivo |
+| **Privacidade** |  Aceitável — dados são simulados, sem informação sensível | Necessário apenas para dados confidenciais reais |
+| **Recursos** |  Processamento nos servidores HuggingFace | Llama 3.1 8B exige ~16GB VRAM — no limite da T4 |
+| **Estabilidade** |  Sem risco de OOM no notebook | Download de ~16GB pode travar a sessão |
+| **Foco** |  Foco total em Prompt Engineering | Gerenciamento de pipeline local desvia do objetivo |
 
 A execução local faria sentido se os dados fossem reais e confidenciais.
 No E.D.E.N., como os dados são simulados para fins acadêmicos, o
@@ -115,7 +115,7 @@ custo-benefício favorece claramente a API remota.
 
 ---
 
-## 🧠 Técnicas de Prompt Engineering Aplicadas
+##  Técnicas de Prompt Engineering Aplicadas
 
 | Técnica | Módulo | Justificativa |
 |---|---|---|
@@ -135,17 +135,17 @@ custo-benefício favorece claramente a API remota.
 
 ---
 
-## 🔒 Segurança
+##  Segurança
 
 O token HuggingFace é carregado **exclusivamente via Kaggle Secrets**,
 nunca hardcoded no código. Isso garante que a chave não apareça no
 notebook publicado, em logs de execução ou histórico de commits.
 
 ```python
-# ✅ CORRETO
+# CORRETO
 HF_TOKEN = user_secrets.get_secret("HF_TOKEN")
 
-# ❌ NUNCA faça isso
+# NUNCA faça isso
 HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
