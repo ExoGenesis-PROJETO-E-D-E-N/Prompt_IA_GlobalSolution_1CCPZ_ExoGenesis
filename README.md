@@ -9,8 +9,9 @@
 ## Integrantes
 
 | Nome | RM |
-|Arthur Vettorazzo de Souza | RM 569445 |
-|Brayan Barbosa Dos Santos | RM 573682 |
+| :--- | :--- |
+| Arthur Vettorazzo de Souza | RM 569445 |
+| Brayan Barbosa Dos Santos | RM 573682 |
 | Giovanne Gomes Petenuci | RM 574091 |
 
 **Turma:** *1CCPZ* — Ciências da Computação — FIAP
