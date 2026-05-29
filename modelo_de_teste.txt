@@ -1,0 +1,162 @@
+====================================================
+  MODELO DE TESTE — PROJETO E.D.E.N.
+  Ecological Development in Exo-Environments
+  Global Solution 2026 | FIAP
+====================================================
+
+Este documento define os cenários de teste do sistema E.D.E.N. e as
+respostas esperadas para cada situação. Serve como referência de qualidade
+para avaliação e validação do comportamento do Mission Control AI.
+
+----------------------------------------------------
+
+[T01] MÓDULO: Análise de Status — Ciclo Estável
+CATEGORIA: Operação Normal
+
+SITUAÇÃO:
+  Ciclo 1 | LEO-001 | Inicialização Orbital
+  Temperatura: 24.5°C | Energia: 87% | Lux: 4.200 | Vibração: 0.12 m/s²
+  Link: 98% | Alerta X = 0
+
+RESPOSTA ESPERADA:
+  Todos os subsistemas dentro dos parâmetros normais. Temperatura em 24.5°C
+  está no centro da faixa segura [18°C–35°C], sem estresse térmico. Energia
+  em 87% garante autonomia plena para todos os sistemas de suporte de vida.
+  Luminosidade em 4.200 lux é adequada para fotossíntese sem dano por radiação.
+  Vibração mínima de 0.12 m/s² não representa risco estrutural. Link de 98%
+  garante comunicação plena com a estação terrestre. Sementes em aclimatação
+  inicial — sem necessidade de intervenção.
+  STATUS GERAL: ÓTIMO — Biocápsula operando em condições ideais de inicialização.
+
+----------------------------------------------------
+
+[T02] MÓDULO: Análise de Status — Ciclo de Estresse Controlado
+CATEGORIA: Estresse Intencional / Operação Científica
+
+SITUAÇÃO:
+  Ciclo 4 | LEO-004 | Pico de Estresse — Indução de Mutação
+  Temperatura: 33.4°C | Energia: 22.1% | Lux: 12.400 | Vibração: 0.41 m/s²
+  Link: 79.3% | Alerta X = 0
+
+RESPOSTA ESPERADA:
+  Temperatura em 33.4°C está dentro do range seguro, mas próxima ao limiar
+  superior — estresse térmico benéfico em curso. Energia em 22.1% está
+  levemente acima do limiar crítico (20%); monitoramento redobrado necessário.
+  Luminosidade em 12.400 lux abaixo do limiar letal (13.000 lux) — exposição
+  à radiação UV controlada e científicamente válida. Vibração e link normais.
+  Esta é a configuração ideal de indução de mutação genética — NÃO interromper.
+  STATUS GERAL: ESTÁVEL — Estresse controlado em progresso; ativação genética
+  máxima detectada. Manter condições atuais.
+
+----------------------------------------------------
+
+[T03] MÓDULO: Recomendação de Ação — Energia Crítica
+CATEGORIA: Falha de Subsistema / Ação Preventiva
+
+SITUAÇÃO:
+  Energia: 17.3% (abaixo do limiar crítico C=1)
+  Temperatura: 28°C | Vibração: 0.2 m/s² | X = 0
+
+RESPOSTA ESPERADA:
+  Análise: único subsistema fora do limiar é energia. Outros sistemas estáveis.
+  Ações:
+  1. [IMEDIATA] Ativar Eco-Mode: desligar aquecedor auxiliar e reduzir LEDs UV
+     para 40% de intensidade.
+  2. [IMEDIATA] Reorientar painéis solares para maximizar captação fotovoltaica
+     na próxima janela de exposição solar.
+  3. [MONITORAMENTO] Verificar nível de energia a cada 15 minutos.
+  4. [CONTINGÊNCIA] Se energia < 12%: iniciar sequência de reentrada antecipada.
+  Justificativa: Intervenção mínima e cirúrgica. O estresse biológico
+  é preservado — sacrificá-lo neste momento seria falha de missão.
+
+----------------------------------------------------
+
+[T04] MÓDULO: Recomendação de Ação — Evento Crítico (X=1)
+CATEGORIA: Crise Sistêmica / Múltiplas Falhas
+
+SITUAÇÃO:
+  Ciclo 5 | LEO-005 | Impacto de Microdetrito
+  Temperatura: 38.7°C | Energia: 17.3% | Lux: 15.800 | Vibração: 2.95 m/s²
+  Link: 41% | Alerta X = 1 (B=1, C=1, D=1, E=1, A=1)
+
+RESPOSTA ESPERADA:
+  Diagnóstico: X=1 — falhas simultâneas em todos os subsistemas. Crise sistêmica.
+  Temperatura 3.7°C acima do limiar letal. Energia insuficiente. Impacto estrutural
+  detectado. Radiação UV acima do tolerável. Comunicação comprometida.
+  Ações:
+  1. [CRÍTICA — IMEDIATA] Acionar blindagens físicas completas da biocápsula.
+  2. [CRÍTICA — IMEDIATA] Entrar em Modo de Sobrevivência: manter APENAS controle
+     térmico básico. Desligar todos os demais sistemas não essenciais.
+  3. [CRÍTICA] Acionar propulsores de manobra para ajuste de órbita segura.
+  4. [CRÍTICA] Avaliar integridade estrutural antes de qualquer outra operação.
+  5. [CONTINGÊNCIA] Preparar sequência de de-orbit controlado se estrutura
+     comprometida for confirmada.
+  Justificativa: X=1 indica risco de morte iminente das amostras. Prioridade
+  absoluta é preservar as plantas sobreviventes.
+
+----------------------------------------------------
+
+[T05] MÓDULO: Relatório JSON — Function Calling
+CATEGORIA: Structured Output / Integração com Sistemas
+
+SITUAÇÃO:
+  Ciclo 6 | LEO-006 | Recuperação Pós-Evento
+  Temperatura: 28.2°C | Energia: 44.6% | Lux: 5.100 | Vibração: 0.22 m/s²
+  Link: 86.5% | Alerta X = 0
+
+RESPOSTA ESPERADA (estrutura JSON):
+  {
+    "missao": "E.D.E.N. — Projeto E.D.E.N.",
+    "ciclo_analisado": 6,
+    "nivel_alerta": "ESTÁVEL",
+    "subsistemas": {
+      "temperatura": {"valor": 28.2, "status": "OK", "observacao": "..."},
+      "energia": {"valor": 44.6, "status": "OK", "observacao": "..."},
+      ...
+    },
+    "alerta_X": 0,
+    "risco_biologico": 3.9,
+    "acao_prioritaria": "Monitorar recuperação das amostras sobreviventes",
+    "resumo_executivo": "..."
+  }
+
+----------------------------------------------------
+
+[T06] MÓDULO: Previsão de Falha
+CATEGORIA: Análise de Tendência Histórica
+
+SITUAÇÃO:
+  Histórico completo de 6 ciclos disponível.
+  Pergunta: O que esperar no Ciclo 7?
+
+RESPOSTA ESPERADA:
+  Análise de tendência: energia se recuperou de 17.3% (ciclo 5) para 44.6%
+  (ciclo 6) — recuperação fotovoltaica em progresso mas ainda abaixo do nível
+  inicial (87%). Temperatura estabilizou após o pico crítico. Vibração voltou
+  ao normal — impacto do ciclo 5 foi provavelmente pontual.
+  Subsistema mais vulnerável: energia — dependente de janelas solares disponíveis.
+  Previsão Ciclo 7: Temp ~26°C | Energia ~58% | Vibração ~0.15 m/s² | Risco ~2.5/10
+  Confiança: ~70% — principal incerteza é a disponibilidade de geração solar.
+
+----------------------------------------------------
+
+[T07] MÓDULO: Análise de Status — Ciclo de Eclipse
+CATEGORIA: Operação em Modo Noturno
+
+SITUAÇÃO:
+  Ciclo 3 | LEO-003 | Zona de Eclipse — Lado Noturno
+  Temperatura: 19.1°C | Energia: 31% | Lux: 320 | Vibração: 0.09 m/s²
+  Link: 88.7% | Alerta X = 0
+
+RESPOSTA ESPERADA:
+  Ciclo noturno operando dentro dos parâmetros esperados. Temperatura em 19.1°C
+  levemente acima do limiar mínimo (18°C) — sem risco imediato, mas monitoramento
+  necessário se o eclipse se prolongar. Energia em 31% — sem captação solar neste
+  momento, consumo deve ser controlado. Luminosidade em 320 lux compensada pelos
+  LEDs UV internos para manutenção da fotossíntese. Vibração mínima.
+  Redução metabólica das plantas é esperada e faz parte do ciclo biológico normal.
+  STATUS GERAL: ESTÁVEL — Operação noturna nominal; LEDs UV compensando ausência solar.
+
+====================================================
+  FIM DO MODELO DE TESTE
+====================================================

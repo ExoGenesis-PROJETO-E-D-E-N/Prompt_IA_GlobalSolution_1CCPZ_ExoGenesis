@@ -1,0 +1,44 @@
+====================================================
+  ENTREGA — GLOBAL SOLUTION 2026
+  Disciplina: Prompt and Artificial Intelligence
+  Turma: 1CCPZ
+====================================================
+
+INTEGRANTES:
+Arthur Vettorazzo de Souza — RM 569445
+Brayan Barbosa Dos Santos — RM 573682
+Giovanne Gomes Petenuci — RM 574091
+
+----------------------------------------------------
+REPOSITÓRIO GITHUB:
+https://github.com/ExoGenesis-PROJETO-E-D-E-N/Prompt_IA_GlobalSolution_1CCPZ_ExoG-nesis/upload/main
+----------------------------------------------------
+
+PROJETO: E.D.E.N. — Ecological Development in Exo-Environments
+         (Desenvolvimento Ecológico em Exoambientes)
+
+RESUMO:
+  Sistema de Mission Control AI baseado em LLM para monitoramento
+  e controle autônomo de uma biocápsula botânica orbital. A IA
+  interpreta telemetria simulada de sensores IoT e gera análises
+  de status, previsões de falha e recomendações de ação usando
+  técnicas avançadas de Prompt Engineering.
+
+MODELO DE IA:
+  Llama 3.1 8B Instruct via HuggingFace Inference API
+
+TÉCNICAS DE PROMPT ENGINEERING:
+  - System Prompt com persona e regras operacionais
+  - Chain-of-Thought (análise de status e previsão de falha)
+  - Few-Shot Prompting (recomendações de ação)
+  - Function Calling / Structured Output (relatório JSON)
+
+INJEÇÃO DE CONTEXTO:
+  Prompt Augmentation direta — dados de telemetria dinâmica
+  injetados no prompt no momento da inferência (sem RAG)
+
+PLATAFORMA: Kaggle
+
+====================================================
+  FIM DA ENTREGA
+====================================================
