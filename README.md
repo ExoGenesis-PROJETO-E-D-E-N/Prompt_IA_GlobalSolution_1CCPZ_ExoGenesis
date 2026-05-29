@@ -152,7 +152,7 @@ HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 ---
 
-## 📁 Arquivos do Repositório
+##  Arquivos do Repositório
 
 | Arquivo | Descrição |
 |---|---|
